@@ -184,12 +184,12 @@ nav a:hover {
   position: relative;
   border-bottom: 1px solid grey;
 }
-article{
+article {
   flex: 1;
   min-width: 300px;
   margin-right: 20px;
 }
-article a{
+article a {
   text-decoration: none;
 }
 article .news_data {
@@ -232,4 +232,27 @@ article .news_resume {
 .flex {
   display: flex;
   flex-wrap: wrap;
+}
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.footer_divs{
+  height: 150px;
+
+}
+.footer_health, .footer_bills, .footer_records {
+  flex:1;
+  color: white;
+  padding: 20px;
+}
+.footer_health{
+  background-color:#39aae1;
+}
+.footer_records{
+  background-color:#0079c7;
+}
+.footer_bills{
+  background-color:#2b4c99;
 }
