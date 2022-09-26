@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, user-scalable=0" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .querySelector(".menuMobile")
+          .addEventListener("click", function () {
+            if (
+              document.querySelector(".menu nav ul").style.display == "flex"
+            ) {
+              document.querySelector(".menu nav ul").style.display = "none";
+            } else {
+              document.querySelector(".menu nav ul").style.display = "flex";
+            }
+          });
+      };
+    </script>
     <title>MediCenter</title>
   </head>
   <body>
@@ -15,8 +30,16 @@
         </div>
         <div class="menu">
           <nav>
+            <div class="menuMobile">
+              <div class="mm_line"></div>
+              <div class="mm_line"></div>
+              <div class="mm_line"></div>
+            </div>
             <ul>
               <li class="active">
+                <a href="">HOME</a>
+              </li>
+              <li>
                 <a href="">HOME</a>
               </li>
               <li>
@@ -100,7 +123,7 @@
         </div>
       </div>
     </section>
-    <section id="geral">
+    <section class="geral">
       <div class="container">
         <section>
           <div class="widget">
@@ -172,7 +195,7 @@
                   <div class="news_resume">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Nobis suscipit esse minima nemo alias, fugiat laborum
-                    facere! Assumenda, adipisci magni. Lorem ipsum dolor sit
+                    facere! Assumenda, adipisci magni. Lorem ipsum dolor sit F
                     amet, consectetur adipisicing elit. Nobis suscipit esse
                     minima nemo alias, fugiat laborum facere! Assumenda,
                     adipisci magni. Lorem ipsum dolor sit amet, consectetur
@@ -287,34 +310,67 @@
     </section>
     <footer>
       <div class="footer_group">
-        <div class="footer_divs container">
+        <div class="footer_divs footer_container">
           <div class="footer_health">
             <h2>Health Insurance</h2>
             <p>
               Here in medicenter we have individual
-              <img
-                class="svg_arrow"
-                src="assets/images/right-arrow-svgrepo-com.svg"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                ></path>
+              </svg>
             </p>
           </div>
           <div class="footer_records">
             <h2>Record Bills</h2>
             <p>
               Here in medicenter we have individual
-              <img
-                class="svg_arrow"
-                src="assets/images/right-arrow-svgrepo-com.svg"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                ></path>
+              </svg>
             </p>
           </div>
           <div class="footer_bills">
             <h2>Online Bill Pay</h2>
-            <p>Here in medicenter we have individual</p>
+            <p>
+              Here in medicenter we have individual
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right-short"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                ></path>
+              </svg>
+            </p>
           </div>
         </div>
-        <div class="footer_second_row container">
-          <div class="footer_links">
+        <div class="footer_container footer_second_row">
+          <div class="footer_links pad">
             <h2>Medicenter Clinic</h2>
             <div class="widget_title_bar"></div>
             <p>
@@ -331,7 +387,7 @@
               </div>
             </div>
           </div>
-          <div class="footer_latest_posts">
+          <div class="footer_latest_posts pad">
             <h2>Latest Posts</h2>
             <div class="widget_title_bar"></div>
             <div class="latest_posts">
@@ -368,7 +424,7 @@
               </ul>
             </div>
           </div>
-          <div class="footer_latest_tweets">
+          <div class="footer_latest_tweets pad">
             <h2>Latest Tweets</h2>
             <div class="widget_title_bar"></div>
 
@@ -397,41 +453,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="container flexColumn">
-        <div class="footer_menu">
-          <div class="fm_1">...</div>
-          <div class="fm_2">...</div>
-          <div class="fm_3">...</div>
-        </div>
-        <div class="footer_area">
-          <div class="footer_areaitem">
-            <div class="widget">
-              <div class="widget_title"><h2>Medicenter Clinic</</div>
-              <div class="widget_title_bar"></div>
-            </div>
-            <div class="widget_body1">...</div>
-          </div>
-          <div class="footer_areaitem">
-            <div class="widget">
-              <div class="widget_title">Latest Posts</div>
-              <div class="widget_title_bar"></div>
-            </div>
-            <div class="widget_body1">...</div>
-          </div>
-          <div class="footer_areaitem">
-            <div class="widget">
-              <div class="widget_title">Latest Tweets</div>
-              <div class="widget_title_bar"></div>
-            </div>
-            <div class="widget_body1">...</div>
-          </div>
-        </div>
-        <div class="footer_copy">
-          Copyright - Todos os direitos reservados
-        </div>
-      </div>
-      </div> -->
         <div class="copyright_box">
           <div class="widget_title_bar copy"></div>
           <p>@Copyright - Todos os direitos reservados</p>

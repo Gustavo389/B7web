@@ -11,6 +11,11 @@ header {
   justify-content: center;
 }
 
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  width: 990px;
+}
 .container {
   display: flex;
   justify-content: space-between;
@@ -139,7 +144,7 @@ nav a:hover {
   flex-direction: row;
   justify-content: space-between;
 }
-#geral {
+.geral {
   display: flex;
   justify-content: center;
 }
@@ -183,6 +188,9 @@ nav a:hover {
   padding-bottom: 20px;
   position: relative;
   border-bottom: 1px solid grey;
+}
+.contacts_appointment b {
+  color: black;
 }
 article {
   flex: 1;
@@ -250,7 +258,6 @@ footer {
   padding: 20px;
 }
 
-
 .footer_health {
   background-color: #39aae1;
 }
@@ -296,7 +303,12 @@ b {
   color: rgba(255, 255, 255, 0.541);
   flex: 1;
 }
-
+.footer_group svg {
+  padding: 0;
+  margin: 0;
+  height: 13px;
+  width: 13px;
+}
 .footer_latest_tweets h2 {
   color: white;
 }
@@ -374,6 +386,9 @@ footer .widget_title {
   line-height: 40px;
   font-size: 12px;
 }
+.desc_posts ul {
+  list-style: none;
+}
 
 .desc_posts {
   list-style: url("/assets/images/right-arrow-svgrepo-com.svg");
@@ -383,7 +398,104 @@ footer .widget_title {
 .flex {
   flex: 1;
 }
-.svg_arrow{
+.svg_arrow {
   width: 10px;
   height: 10px;
+}
+.menuMobile {
+  display: none;
+  height: 40px;
+  margin-right: 30px;
+  width: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.mm_line {
+  height: 3px;
+  background-color: #36a9e1;
+}
+@media (max-width: 990px) {
+  header .container {
+    flex-direction: row;
+  }
+
+  nav ul {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+  header {
+    height: auto;
+  }
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .logo {
+    padding-left: 20px;
+  }
+
+  .banner_headline {
+    padding: 40px;
+  }
+  .banner_headline h1 {
+    font-size: 55px;
+  }
+  .banner_headline h2 {
+    font-size: 17px;
+  }
+  .banner_options {
+    height: auto;
+    flex-direction: column;
+  }
+  .geral .container {
+    flex-direction: column;
+  }
+  .geral section,
+  aside {
+    padding: 20px;
+  }
+  .footer_menu {
+    flex-direction: column;
+  }
+  .footer_area {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .footer_copy {
+    padding-left: 20px;
+  }
+  .footer_divs {
+    width: auto;
+    padding: 0px;
+    height: auto;
+    flex-direction: column;
+  }
+  .footer_container {
+    width: auto;
+    height: auto;
+  }
+  .pad {
+    padding: 20px;
+  }
+  .footer_second_row {
+    flex-direction: column;
+  }
+  .copyright_box {
+    width: auto;
+    height: auto;
+  }
+  .copyright_box p {
+    padding-left: 20px;
+  }
+  .widget_title {
+    margin-top: 0px;
+  }
+  #banner {
+    height: auto;
+  }
 }
